@@ -41,4 +41,18 @@ function sortearAmigo() {
     li.textContent = `Seu amigo secreto sorteado é: ${amigoSecreto}`
     ul.appendChild(li)
   }
+
+}
+
+// Função para recomeçar
+function resetar() {
+  alert('Pronto(a) para sortear novamente? Sim? Então vamos nessa!')
+
+  const ulResultado = document.getElementById('resultado')
+  ulResultado.innerHTML = ''
+
+  const ulListaDeAmigos = document.getElementById('listaAmigos')
+  ulListaDeAmigos.innerHTML = ''
+
+  nomes = []
 }
