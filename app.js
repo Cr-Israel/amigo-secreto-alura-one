@@ -26,22 +26,23 @@ function listaDeAmigos() {
 
 // Função para sortear amigos
 function sortearAmigo() {
-  
   if (nomes == [] || nomes.length == 0) {
     alert('Por favor, adicione um nome antes de sortear')
-  } else {
-    // const amigoSecreto = nomes[Math.floor(Math.random() * nomes.length)]
-    const index = Math.floor(Math.random() * nomes.length)
-    const amigoSecreto = nomes[index]
-
-    const ul = document.getElementById('resultado')
-    ul.innerHTML = ''
-
-    const li = document.createElement('li')
-    li.textContent = `Seu amigo secreto sorteado é: ${amigoSecreto}`
-    ul.appendChild(li)
   }
+  // const amigoSecreto = nomes[Math.floor(Math.random() * nomes.length)]
+  const index = Math.floor(Math.random() * nomes.length)
+  const amigoSecreto = nomes[index]
 
+  const ul = document.getElementById('resultado')
+  ul.innerHTML = ''
+
+  const li = document.createElement('li')
+  li.textContent = `Seu amigo secreto sorteado é: ${amigoSecreto}`
+  ul.appendChild(li)
+
+  let buttonSortear = document.getElementById('sortear-amigo')
+  buttonSortear.style.visibility = 'hidden'
+  showButtonReset()
 }
 
 // Função para recomeçar
@@ -55,4 +56,14 @@ function resetar() {
   ulListaDeAmigos.innerHTML = ''
 
   nomes = []
+
+  document.getElementById('resetar').style.visibility = 'hidden'
+
+  let buttonSortear = document.getElementById('sortear-amigo')
+  buttonSortear.style.visibility = 'visible'
+}
+
+function showButtonReset() {
+  let buttonReset = document.getElementById('resetar')
+  buttonReset.style.visibility = 'visible'
 }

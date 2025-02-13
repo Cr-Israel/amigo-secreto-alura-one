@@ -162,6 +162,7 @@ ul {
 }
 
 .button-reset {
+    visibility: hidden;
     margin-top: 10px;
     display: flex;
     justify-content: center;
